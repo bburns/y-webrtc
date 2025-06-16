@@ -13,7 +13,13 @@ import * as math from 'lib0/math'
 import { createMutex } from 'lib0/mutex'
 
 import * as Y from 'yjs' // eslint-disable-line
-import Peer from 'simple-peer/simplepeer.min.js'
+
+//. turn this off in lieue of direct script import
+// because simplepeer.min.js doesn't have a default export -
+// it's meant to be used with a bundler OR in a script tag.
+// so just put this in index.html, and it'll make a global Peer
+// <script src="./vendor/simple-peer/simplepeer.min.js"></script>
+// import Peer from 'simple-peer/simplepeer.min.js'
 
 import * as syncProtocol from 'y-protocols/sync'
 import * as awarenessProtocol from 'y-protocols/awareness'
